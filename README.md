@@ -43,7 +43,6 @@
 
   In the design of the User interface we choose the combination of the dark color to give users a better  vision. We mainly have five parts including login and registration, choosing interface, main interface, adding interface and setting interface.
 
-![image]([https://github.com/MaiEmily/map/blob/master/public/image/20190528145810708.png](https://github.com/android-app-development-course/2023-spring-Aberdeen-18-Party/blob/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230616151810.png))
 
 
 
