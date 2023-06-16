@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greendark"
+    tools:context=".Setting">
+
+    <LinearLayout
+        android:id="@+id/llHomePage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llHomeNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:orientation="vertical"
+            android:layout_marginTop="18dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/bear" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="TextView"
+                    android:textSize="25dp"
+                    android:textColor="@color/white"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/whitebk"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 以下为导航栏的布局 -->
+    <LinearLayout
+        android:id="@+id/llHomeNav"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="395dp"
+        android:layout_height="78dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llHomePage">
+
+        <!-- 【主页】活动中，【主页】按钮设为已激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/HomeS"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/home"
+            android:onClick="onNavButtonsTapped"
+            android:text="Home"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/grey" />
+
+        <!-- 其他按钮设为未激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/AddS"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/add"
+            android:onClick="onNavButtonsTapped"
+            android:text="Add"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/grey" />
+
+        <Button
+            android:id="@+id/SettingS"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/settingp"
+            android:onClick="onNavButtonsTapped"
+            android:text="Setting"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/greendark" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

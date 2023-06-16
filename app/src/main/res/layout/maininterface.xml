@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".Main">
+
+    <LinearLayout
+        android:id="@+id/llHomePage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llHomeNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+       <!--
+        该 LinearLayout 为主体页面布局的容器，你也可以根据需要换成其他形式的 Layout
+        以上代码将页面布局容器和底部的导航栏进行了约束
+        即该容器的底端和导航栏的顶端彼此约束
+        确保该容器的占用空间不会覆盖导航栏
+        页面的主体布局请在该容器内部（即此处）创建
+        -->
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="You might like these parties..."
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/fun" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/spo"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/food" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/whitebk"
+                android:layout_marginTop="10dp"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="38dp"
+                    android:id="@+id/A1">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@drawable/wuyu" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Sing"
+                        android:textSize="70dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/A2">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@drawable/wuyu" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Sing"
+                        android:textSize="70dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/A3">
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="95dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_weight="1"
+                        android:background="@drawable/wuyu" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Sing"
+                        android:textSize="70dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"></LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 以下为导航栏的布局 -->
+    <LinearLayout
+        android:id="@+id/llHomeNav"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="395dp"
+        android:layout_height="78dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llHomePage">
+
+        <!-- 【主页】活动中，【主页】按钮设为已激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/HomeH"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/homep"
+            android:onClick="onNavButtonsTapped"
+            android:text="Home"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/greendark" />
+
+        <!-- 其他按钮设为未激活样式，注意 drawableTop 和 textColor 属性的值 -->
+        <Button
+            android:id="@+id/addH"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/add"
+            android:onClick="onNavButtonsTapped"
+            android:text="Add"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/grey" />
+
+        <Button
+            android:id="@+id/SettingH"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/setting"
+            android:onClick="onNavButtonsTapped"
+            android:text="Setting"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/grey" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
